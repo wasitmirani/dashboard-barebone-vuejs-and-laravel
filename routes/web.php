@@ -19,4 +19,4 @@ use App\Http\Controllers\backend\dashboard\DashboardController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/',[DashboardController::class,'index']);
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
