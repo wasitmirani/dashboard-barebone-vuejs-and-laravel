@@ -1,5 +1,5 @@
 <?php
-namespace App\Helper;
+namespace App\Helpers;
 
 class HelperComponent {
 
@@ -14,9 +14,7 @@ class HelperComponent {
                 [
                     "heading" => "Apps",
                 ],
-                [
-                        "single_link" => setSingleLink( "Blogs", "link","blogs-view","/blogs"),
-                ],
+
                 [
 
                     "menu"=>[
