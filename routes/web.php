@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\backend\dashboard\DashboardController;
 
 /*
@@ -19,7 +20,7 @@ use App\Http\Controllers\backend\dashboard\DashboardController;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
-Route::get('/',function(){
-    return redirect()->route('dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+
+Route::get('/', [FrontendController::class, 'index'])->name('index');
